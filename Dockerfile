@@ -23,11 +23,15 @@ RUN pip install git-review \
 RUN apt-get install -y net-tools \
                        iputils-ping
 
+# Setup sshd
 RUN mkdir /var/run/sshd
 RUN echo 'root:password' | chpasswd
 RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 
 RUN ssh-keygen -A
+
+# Add vimrc file
+COPY lib/vim/vimrc /root/.vimrc
 
 WORKDIR /root/work
 
