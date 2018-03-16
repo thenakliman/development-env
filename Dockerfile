@@ -33,6 +33,11 @@ RUN ssh-keygen -A
 # Add vimrc file
 COPY lib/vim/vimrc /root/.vimrc
 
+# Beautify Bash
+COPY lib/bash/bash_aliases /root/.bash_aliases
+COPY  lib/bash/bash_profile /root/.my_profile
+RUN echo "source /root/.my_profile" >> /root/.bash_profile
+
 WORKDIR /root/work
 
 EXPOSE 22
