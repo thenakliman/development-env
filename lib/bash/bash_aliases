@@ -1,0 +1,5 @@
+alias ll='ls -l
+alias gs='git status'
+alias gc='git checkout'
+alias gd='git diff'
+alias gb='git branch'
