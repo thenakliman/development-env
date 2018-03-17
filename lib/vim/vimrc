@@ -1,0 +1,29 @@
+set autoindent
+set expandtab
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+set wrap
+set linebreak
+set scrolloff=1
+set laststatus=2
+set ruler
+set wildmenu
+set number
+set title
+set background=dark
+set autoread
+set confirm
+set formatoptions+=j
+set spell
+set wildignore+=.pyc,.swp
+
+syntax on
+filetype plugin indent on
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
