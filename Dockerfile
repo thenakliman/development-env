@@ -38,6 +38,13 @@ COPY lib/bash/bash_aliases /root/.bash_aliases
 COPY  lib/bash/bash_profile /root/.my_profile
 RUN echo "source /root/.my_profile" >> /root/.bash_profile
 
+# Add git config
+COPY lib/git/gitconfig /root/.gitconfig
+
+# Add link for hooks of repositories
+COPY lib/git/setup_hooks.sh /
+RUN /setup_hooks.sh && rm /setup_hooks.sh
+
 WORKDIR /root/work
 
 EXPOSE 22
