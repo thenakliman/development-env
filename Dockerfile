@@ -42,8 +42,8 @@ RUN echo "source /root/.my_profile" >> /root/.bash_profile
 COPY lib/git/gitconfig /root/.gitconfig
 
 # Add link for hooks of repositories
-COPY lib/git/setup_hooks.sh /
-RUN /setup_hooks.sh && rm /setup_hooks.sh
+COPY lib/git/setup_hooks.sh /root/setup_hooks.sh
+RUN /root/setup_hooks.sh && rm /root/setup_hooks.sh
 
 WORKDIR /root/work
 

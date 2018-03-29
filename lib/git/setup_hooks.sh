@@ -1,3 +1,5 @@
+#! /bin/bash
+
 GIT_TEMPLATE_DIRECTORY="$HOME/.git-templates"
 
 echo "Git template directory $GIT_TEMPLATE_DIRECTORY"
